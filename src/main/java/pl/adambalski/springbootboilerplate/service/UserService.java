@@ -41,6 +41,7 @@ public class UserService {
         return userRepository.getUserByLogin(login).orElseThrow(NoSuchUserException::new);
     }
 
+    // todo impl in controller
     public User getUserByUUID(UUID uuid) {
         return userRepository.getUserByUUID(uuid).orElseThrow(NoSuchUserException::new);
     }

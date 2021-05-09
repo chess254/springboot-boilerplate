@@ -26,11 +26,8 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-// todo move to pl.adambalski.springbootboilerplate.AuthenticateEndpointTest
-// todo try to get rid of reflexion using @MockBean
-// todo and consider checking if token is valid after request in #testAuthenticateEndpointWIthCorrectUser()
 @WebMvcTest
-public class AuthenticateEndpointTest {
+public class AuthenticateControllerTest {
     @Autowired
     MockMvc mvc;
 
