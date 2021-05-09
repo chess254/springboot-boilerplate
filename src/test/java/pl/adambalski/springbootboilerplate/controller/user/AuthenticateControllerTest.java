@@ -1,4 +1,4 @@
-package pl.adambalski.springbootboilerplate.security.mockmvc;
+package pl.adambalski.springbootboilerplate.controller.user;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +17,6 @@ import org.springframework.test.web.servlet.ResultMatcher;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import pl.adambalski.springbootboilerplate.controller.user.AuthenticationController;
 import pl.adambalski.springbootboilerplate.repository.AdminJpaRepository;
 import pl.adambalski.springbootboilerplate.security.PasswordEncoderFactory;
 import pl.adambalski.springbootboilerplate.security.SecurityConfiguration;
@@ -27,6 +26,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
+// todo move to pl.adambalski.springbootboilerplate.AuthenticateEndpointTest
+// todo try to get rid of reflexion using @MockBean
+// todo and consider checking if token is valid after request in #testAuthenticateEndpointWIthCorrectUser()
 @WebMvcTest
 public class AuthenticateEndpointTest {
     @Autowired
